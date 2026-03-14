@@ -57,6 +57,13 @@ export const skills = {
   others: ["Auth0", "Twilio", "Mailgun"],
 };
 
+export const hobbies = [
+  { name: "Cricket", icon: "Trophy" },
+  { name: "Traveling", icon: "Plane" },
+  { name: "Exploring New Technologies", icon: "Cpu" },
+  { name: "Social Work", icon: "Heart" }
+];
+
 export const personalProjects = [
   {
     name: "AIWoods",
@@ -111,63 +118,63 @@ export const inOfficeProjects = [
   {
     name: "PERTAMINA – CLAIMS TRACKING SYSTEM OF VESSEL",
     description: "Claims Tracking App is a web application for creating and managing 10 types of vessel-related claims such as Slow Pumping, Slow Speed, Transport Loss, etc.",
-    environment: "ASP.NET Core, React, SQL, Azure DevOps",
+    technologies: "ASP.NET Core, React, SQL, Azure DevOps",
     role: "Analyzing requirements, creating new features, PR reviewing, and participating in scrum.",
     link: "https://pertamina.com"
   },
   {
     name: "COX AUTOMOTIVE - CAR AUCTION APPLICATION",
     description: "A web application used for auctioning, buying, selling, and transporting used vehicles. Dealers can generate invoices, manage sale events, and process payments.",
-    environment: "ASP.NET Core, React, MS SQL",
+    technologies: "ASP.NET Core, React, MS SQL",
     role: "Analyzing requirements, handling defects, and participating in agile scrums.",
     link: "https://www.coxautoinc.com"
   },
   {
     name: "YOURCAUSE - NON-PROFIT CHARITY ORGANIZATION",
     description: "Manages staff, employees, donations, and volunteering data for charity organizations. Includes admin setup and employee experience phases.",
-    environment: "Angular, .NET Core, MS SQL, Azure CosmosDb",
+    technologies: "Angular, .NET Core, MS SQL, Azure CosmosDb",
     role: "Analyzing requirements, providing estimates, designing employee experience pages, unit testing, handling defects.",
     link: "https://www.yourcause.com"
   },
   {
     name: "VISITOR ANALYTICS — WEBSITE PERFORMANCE PROVIDER",
     description: "Tools for tracking and analyzing website statistics and visitors. Includes traffic data, performance metrics, session recordings, and heatmaps.",
-    environment: "ReactJS, NodeJS, MongoDB, Tailwind CSS, Chart.js",
+    technologies: "ReactJS, NodeJS, MongoDB, Tailwind CSS, Chart.js",
     role: "Designed and developed highly responsive user interface components via React concepts.",
     link: "https://www.visitor-analytics.io"
   },
   {
     name: "SMART BULL - ISRAEL FINANCIAL MARKET AGENCY",
     description: "Multi-language support displaying data on foreign stocks, bonds, funds, and assets with charts and browser cache storage.",
-    environment: "ReactJS, NodeJS, MongoDB, Highchart",
+    technologies: "ReactJS, NodeJS, MongoDB, Highchart",
     role: "Designed and developed a responsive user interface and APIs.",
     link: "https://www.smartbull.co.il"
   },
   {
     name: "JOPEHOME — A HOME AUTOMATION SYSTEM",
     description: "Home automation system using AWS serverless architecture for managing smart devices with Alexa and Google Assistant support.",
-    environment: "Alexa Skills, Google Home Action, NodeJS, MySQL, AWS services",
+    technologies: "Alexa Skills, Google Home Action, NodeJS, MySQL, AWS services",
     role: "Designed and developed the architecture and skills to operate smart devices using voice assistance.",
     link: "https://jopehome.com"
   },
   {
     name: "JOPECONNECT SBT— ONLINE SCHEDULE APPOINTMENT",
     description: "Platform for scheduling online appointments between hospital staff and patients with SMS, email, and payment processing.",
-    environment: "ReactJS, NodeJS, MySQL, agora.io, AWS Services",
+    technologies: "ReactJS, NodeJS, MySQL, agora.io, AWS Services",
     role: "Designed and developed a solution to optimize I/O throughput and database resource utilization.",
     link: "https://examroomlive.com"
   },
   {
     name: "BEMORE — ONLINE BOOK CLASSES",
     description: "Platform for booking and scheduling classes. Teachers can manage availability and create lessons.",
-    environment: "ASP.NET Core, MongoDB",
+    technologies: "ASP.NET Core, MongoDB",
     role: "Development & Design",
     link: "https://bemore.com"
   },
   {
     name: "BONFAMI — A CO-PARENTING APPLICATION",
     description: "Web application for co-parenting, helping parents manage responsibilities, financial planning, and child development schedules.",
-    environment: "ASP.NET Core, Entity Framework, MongoDB, SQL Server, Knockout.js",
+    technologies: "ASP.NET Core, Entity Framework, MongoDB, SQL Server, Knockout.js",
     role: "Designed and developed the application and deployments",
     link: "https://bonfami.com"
   }
