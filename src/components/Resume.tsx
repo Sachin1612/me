@@ -118,14 +118,12 @@ export const Resume: React.FC = () => {
 
         {/* Main Content */}
         <div className="flex-1 p-8 pt-10 print:px-8 print:pb-4 relative">
-          <div className="flex flex-col md:flex-row print:flex-row justify-between items-start mb-8 gap-6 print:mb-4 print:mt-0 relative z-10">
-            <div className="flex-1">
-              <h1 className="text-5xl font-black tracking-tight uppercase mb-1 print:text-3xl leading-none text-slate-900">{personalInfo.name}</h1>
-              <div className="flex items-center gap-3">
-                <p className="text-[#FF485B] font-bold text-xl tracking-[0.2em] uppercase print:text-base">{personalInfo.title}</p>
-              </div>
+          <div className="mb-8 print:mb-4 print:mt-0 relative z-10">
+            <h1 className="text-5xl font-black tracking-tight uppercase mb-1 print:text-3xl leading-none text-slate-900">{personalInfo.name}</h1>
+            <div className="flex items-center gap-3 mb-4">
+              <p className="text-[#FF485B] font-bold text-xl tracking-[0.2em] uppercase print:text-base whitespace-nowrap">{personalInfo.title}</p>
             </div>
-            <div className="grid grid-cols-1 gap-y-1 text-xs text-slate-600 font-semibold print:text-right print:items-end">
+            <div className="text-xs text-slate-600 font-semibold">
               <div className="flex items-center gap-2"><Mail size={14} className="text-[#FF485B]" /> {personalInfo.email}</div>
               <div className="flex items-center gap-2"><Phone size={14} className="text-[#FF485B]" /> {personalInfo.phone}</div>
               <div className="flex items-center gap-2"><MapPin size={14} className="text-[#FF485B]" /> {personalInfo.location}</div>
