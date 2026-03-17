@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -14,6 +14,10 @@
 @layer base {
   body {
     @apply bg-paper text-ink font-sans antialiased;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: "cv05", "cv08", "cv11"; /* Inter specific improvements */
   }
 }
 
@@ -25,10 +29,17 @@
     background-color: white !important;
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
+    padding-top: 0; /* Reset */
   }
   @page {
+    margin: 0mm 0mm;
+  }
+  @page :first {
     margin: 0;
-    size: auto;
+  }
+  .print-page-break {
+    break-before: page;
+    margin-top: 0 !important;
   }
   * {
     -webkit-print-color-adjust: exact !important;

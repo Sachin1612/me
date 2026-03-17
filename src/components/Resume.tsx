@@ -52,46 +52,46 @@ export const Resume: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-slate-100 pt-0 pb-12 px-4 print:p-0 print:m-0 print:bg-white print:min-h-0 print:py-0">
+    <div className="min-h-screen bg-slate-100 pt-0 pb-12 px-4 print:bg-white print:min-h-0 print:p-0 print:m-0 print:block">
       {/* Page 1 */}
-      <div className="max-w-5xl mx-auto bg-white shadow-2xl rounded-b-3xl overflow-hidden print:shadow-none print:rounded-none flex flex-col md:flex-row print:flex-row print:max-w-none print:w-full print:border-none print:m-0 print:break-after-page">
+      <div className="max-w-5xl mx-auto bg-white shadow-2xl rounded-b-3xl overflow-hidden print:shadow-none print:rounded-none flex flex-col md:flex-row print:flex-row print:max-w-none print:w-full print:border-none print:m-0 print:mt-0 print:min-h-screen">
         
         {/* Sidebar */}
-        <div className="w-full md:w-80 bg-[#15182F] text-white p-6 flex flex-col gap-6 print:w-64 print:min-h-screen print:bg-[#15182F] print:text-white print:p-6 print:gap-6" style={{ WebkitPrintColorAdjust: 'exact' }}>
-          <div className="flex flex-col gap-2">
-            <h2 className="text-base font-bold border-b border-white/20 pb-2 uppercase tracking-widest flex items-center gap-2">
+        <div className="w-full md:w-80 bg-[#15182F] text-white p-6 flex flex-col gap-6 print:w-64 print:min-h-full print:bg-[#15182F] print:text-white print:p-5 print:gap-4" style={{ WebkitPrintColorAdjust: 'exact' }}>
+          <div className="flex flex-col gap-1.5">
+            <h2 className="text-base font-bold border-b border-white/20 pb-1.5 uppercase tracking-widest flex items-center gap-2">
               <User size={16} className="text-white" /> PROFILE
             </h2>
-            <p className="text-slate-300 text-[11px] leading-relaxed font-light">{personalInfo.profile}</p>
+            <p className="text-slate-300 text-xs leading-relaxed font-light">{personalInfo.profile}</p>
           </div>
 
-          <div className="flex flex-col gap-2">
-            <h2 className="text-base font-bold border-b border-white/20 pb-2 uppercase tracking-widest flex items-center gap-2">
+          <div className="flex flex-col gap-1.5">
+            <h2 className="text-base font-bold border-b border-white/20 pb-1.5 uppercase tracking-widest flex items-center gap-2">
               <GraduationCap size={16} className="text-white" /> EDUCATION
             </h2>
-            <div className="space-y-4">
+            <div className="space-y-3">
               {education.map((edu, i) => (
                 <div key={i} className="print:break-inside-avoid relative pl-0">
-                  <p className="text-[#FF485B] font-bold text-[10px] mb-1">{edu.duration}</p>
-                  <h3 className="font-bold text-[12px] mb-0.5 leading-tight uppercase">{edu.degree}</h3>
-                  <p className="text-slate-300 text-[10px] leading-tight mb-1">{edu.institution}</p>
+                  <p className="text-[#FF485B] font-bold text-[10px] mb-0.5">{edu.duration}</p>
+                  <h3 className="font-bold text-sm mb-0 leading-tight uppercase">{edu.degree}</h3>
+                  <p className="text-slate-300 text-[10px] leading-tight mb-0.5">{edu.institution}</p>
                   <p className="text-[#FF485B] text-[10px] font-bold">Score: {edu.score}</p>
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="flex flex-col gap-2">
-            <h2 className="text-base font-bold border-b border-white/20 pb-2 uppercase tracking-widest flex items-center gap-2">
+          <div className="flex flex-col gap-1.5">
+            <h2 className="text-base font-bold border-b border-white/20 pb-1.5 uppercase tracking-widest flex items-center gap-2">
               <Cpu size={16} className="text-white" /> SKILLS
             </h2>
-            <div className="space-y-3">
+            <div className="space-y-2.5">
               {Object.entries(skills).map(([category, items]) => (
                 <div key={category} className="print:break-inside-avoid">
-                  <h3 className="text-[9px] font-bold text-[#FF485B] uppercase mb-1.5 tracking-widest opacity-90">{category}</h3>
-                  <div className="flex flex-wrap gap-1.5">
+                  <h3 className="text-[10px] font-bold text-[#FF485B] uppercase mb-1 tracking-widest opacity-90">{category}</h3>
+                  <div className="flex flex-wrap gap-1">
                     {items.map(item => (
-                      <span key={item} className="bg-white/5 text-[9px] px-2 py-0.5 rounded text-slate-300 border border-white/10">
+                      <span key={item} className="bg-white/5 text-[10px] px-1.5 py-0.5 rounded text-slate-300 border border-white/10">
                         {item}
                       </span>
                     ))}
@@ -101,13 +101,13 @@ export const Resume: React.FC = () => {
             </div>
           </div>
 
-          <div className="flex flex-col gap-2">
-            <h2 className="text-base font-bold border-b border-white/20 pb-2 uppercase tracking-widest flex items-center gap-2">
+          <div className="flex flex-col gap-1.5">
+            <h2 className="text-base font-bold border-b border-white/20 pb-1.5 uppercase tracking-widest flex items-center gap-2">
               <Heart size={16} className="text-white" /> HOBBIES
             </h2>
-            <div className="flex flex-wrap gap-2 mt-1">
+            <div className="flex flex-wrap gap-1.5 mt-0.5">
               {hobbies.map(hobby => (
-                <span key={hobby.name} className="text-[10px] text-slate-300 bg-white/5 px-2.5 py-1 rounded border border-white/10 flex items-center gap-1.5">
+                <span key={hobby.name} className="text-xs text-slate-300 bg-white/5 px-2 py-0.5 rounded border border-white/10 flex items-center gap-1">
                   <HobbyIcon icon={hobby.icon} />
                   {hobby.name}
                 </span>
@@ -117,80 +117,85 @@ export const Resume: React.FC = () => {
         </div>
 
         {/* Main Content */}
-        <div className="flex-1 p-8 pt-10 print:pt-8 print:px-10 print:pb-8 relative">
-          <div className="flex flex-col md:flex-row justify-between items-start mb-8 gap-6 print:mb-6 relative z-10">
+        <div className="flex-1 p-8 pt-10 print:px-8 print:pb-4 relative">
+          <div className="flex flex-col md:flex-row print:flex-row justify-between items-start mb-8 gap-6 print:mb-4 print:mt-0 relative z-10">
             <div className="flex-1">
-              <h1 className="text-5xl font-black tracking-tighter uppercase mb-1 print:text-4xl leading-none text-slate-900">{personalInfo.name}</h1>
+              <h1 className="text-5xl font-black tracking-tight uppercase mb-1 print:text-3xl leading-none text-slate-900">{personalInfo.name}</h1>
               <div className="flex items-center gap-3">
-                <p className="text-[#FF485B] font-bold text-xl tracking-[0.2em] uppercase print:text-lg">{personalInfo.title}</p>
+                <p className="text-[#FF485B] font-bold text-xl tracking-[0.2em] uppercase print:text-base">{personalInfo.title}</p>
               </div>
             </div>
-            <div className="grid grid-cols-1 gap-y-1.5 text-[11px] text-slate-600 font-semibold">
-              <div className="flex items-center gap-2.5"><Mail size={12} className="text-[#FF485B]" /> {personalInfo.email}</div>
-              <div className="flex items-center gap-2.5"><Phone size={12} className="text-[#FF485B]" /> {personalInfo.phone}</div>
-              <div className="flex items-center gap-2.5"><MapPin size={12} className="text-[#FF485B]" /> {personalInfo.location}</div>
-              <div className="flex items-center gap-2.5"><Github size={12} className="text-[#FF485B]" /> {personalInfo.github}</div>
-              <div className="flex items-center gap-2.5"><Globe size={12} className="text-[#FF485B]" /> Portfolio: https://sachin-portfolio.run.app</div>
+            <div className="grid grid-cols-1 gap-y-1 text-xs text-slate-600 font-semibold print:text-right print:items-end">
+              <div className="flex items-center gap-2"><Mail size={14} className="text-[#FF485B]" /> {personalInfo.email}</div>
+              <div className="flex items-center gap-2"><Phone size={14} className="text-[#FF485B]" /> {personalInfo.phone}</div>
+              <div className="flex items-center gap-2"><MapPin size={14} className="text-[#FF485B]" /> {personalInfo.location}</div>
+              <div className="flex items-center gap-2"><Github size={14} className="text-[#FF485B]" /> {personalInfo.github}</div>
+              <div className="flex items-center gap-2"><Globe size={14} className="text-[#FF485B]" /> Portfolio: https://sachin-portfolio.run.app</div>
             </div>
           </div>
 
-          <div className="space-y-8 print:space-y-6">
+          <div className="space-y-8 print:space-y-4">
             <section>
-              <h2 className="text-xl font-black uppercase tracking-tighter mb-4 flex items-center gap-3 print:text-lg print:mb-3">
+              <h2 className="text-xl font-black uppercase tracking-tight mb-4 flex items-center gap-3 print:text-base print:mb-2">
                 <div className="p-1.5 bg-[#FF485B]/10 rounded-lg">
-                  <Briefcase className="text-[#FF485B]" size={18} />
+                  <Briefcase className="text-[#FF485B]" size={16} />
                 </div>
                 PROFESSIONAL EXPERIENCE
                 <div className="h-px flex-1 bg-slate-100" />
               </h2>
-              <div className="space-y-6 print:space-y-4">
+              <div className="space-y-6 print:space-y-3">
                 {experience.map((exp, i) => (
-                  <div key={i} className="relative pl-8 border-l-2 border-slate-100 print:break-inside-avoid">
+                  <div key={i} className="relative pl-6 border-l-2 border-slate-100 print:break-inside-avoid">
                     <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-white border-2 border-[#FF485B]" />
-                    <div className="flex flex-col sm:flex-row justify-between items-start mb-1.5 gap-2">
+                    <div className="flex flex-col sm:flex-row justify-between items-start mb-1 gap-1">
                       <div>
                         <div className="flex items-center mb-0.5">
                           <CompanyLogo logo={exp.logo} company={exp.company} />
-                          <h3 className="text-base font-bold tracking-tight text-slate-900">{exp.company}</h3>
+                          <h3 className="text-sm font-bold text-slate-900">{exp.company}</h3>
                         </div>
                         <p className="text-[#FF485B] font-bold text-[10px] uppercase tracking-widest">{exp.role}</p>
                       </div>
-                      <div className="text-slate-500 text-[10px] font-bold flex items-center gap-1.5 bg-slate-50 px-2 py-1 rounded-lg border border-slate-100">
-                        <Calendar size={10} className="text-[#FF485B]" /> {exp.duration}
+                      <div className="text-slate-500 text-[10px] font-bold flex items-center gap-1 bg-slate-50 px-1.5 py-0.5 rounded-lg border border-slate-100">
+                        <Calendar size={9} className="text-[#FF485B]" /> {exp.duration}
                       </div>
                     </div>
-                    <p className="text-slate-600 text-[11px] leading-relaxed">{exp.description}</p>
+                    <p className="text-slate-600 text-xs leading-relaxed">{exp.description}</p>
                   </div>
                 ))}
               </div>
             </section>
 
             <section>
-              <h2 className="text-xl font-black uppercase tracking-tighter mb-4 flex items-center gap-3 print:text-lg print:mb-3">
+              <h2 className="text-xl font-black uppercase tracking-tight mb-4 flex items-center gap-3 print:text-base print:mb-2">
                 <div className="p-1.5 bg-[#FF485B]/10 rounded-lg">
-                  <Award className="text-[#FF485B]" size={18} />
+                  <Award className="text-[#FF485B]" size={16} />
                 </div>
                 KEY PROJECTS
                 <div className="h-px flex-1 bg-slate-100" />
               </h2>
-              <div className="grid grid-cols-1 gap-4 print:gap-3">
+              <div className="grid grid-cols-1 gap-4 print:gap-2">
                 {/* Personal Projects */}
-                <div className="space-y-3">
+                <div className="space-y-3 print:space-y-2">
                   <div className="flex items-center gap-2.5 mb-1">
-                    <Code size={14} className="text-[#FF485B]" />
-                    <h3 className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.3em]">PERSONAL PROJECTS</h3>
+                    <Code size={12} className="text-[#FF485B]" />
+                    <h3 className="text-[11px] font-bold text-slate-400 uppercase tracking-[0.3em]">PERSONAL PROJECTS</h3>
                   </div>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 print:grid-cols-2 print:gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 print:grid-cols-2 print:gap-3">
                     {personalProjects.map((proj, i) => (
-                      <div key={i} className="p-4 bg-white rounded-xl border border-slate-100 shadow-sm print:break-inside-avoid flex flex-col hover:border-[#FF485B]/30 transition-colors">
-                        <div className="flex justify-between items-start mb-1.5">
-                          <h4 className="text-sm font-bold text-slate-900">{proj.name}</h4>
-                          <a href={proj.link} target="_blank" className="text-slate-300 hover:text-[#FF485B] transition-colors print:hidden"><ExternalLink size={12} /></a>
+                      <div key={i} className="p-3 bg-white rounded-xl border border-slate-100 shadow-sm print:break-inside-avoid flex flex-col hover:border-[#FF485B]/30 transition-colors">
+                        <div className="flex justify-between items-start mb-1">
+                          <div>
+                            <h4 className="text-sm font-bold text-slate-900">{proj.name}</h4>
+                            <a href={proj.link} target="_blank" className="text-[10px] text-[#FF485B] hover:underline font-medium block mt-0.5">
+                              {proj.link.replace('https://', '').replace('http://', '').replace(/\/$/, '')}
+                            </a>
+                          </div>
+                          <a href={proj.link} target="_blank" className="text-slate-300 hover:text-[#FF485B] transition-colors print:hidden"><ExternalLink size={10} /></a>
                         </div>
-                        <p className="text-[10px] text-slate-600 mb-3 leading-relaxed flex-1">{proj.description}</p>
+                        <p className="text-xs text-slate-600 mb-2 leading-relaxed flex-1">{proj.description}</p>
                         <div className="flex flex-wrap gap-1">
                           {proj.tags.map(tag => (
-                            <span key={tag} className="text-[8px] font-bold uppercase bg-slate-50 px-2 py-0.5 rounded border border-slate-100 text-slate-500">{tag}</span>
+                            <span key={tag} className="text-[9px] font-bold uppercase bg-slate-50 px-1.5 py-0.5 rounded border border-slate-100 text-slate-500">{tag}</span>
                           ))}
                         </div>
                       </div>
@@ -214,60 +219,60 @@ export const Resume: React.FC = () => {
       </div>
 
       {/* Page 2 - Professional Projects */}
-      <div className="max-w-5xl mx-auto bg-white shadow-2xl rounded-t-3xl mt-8 overflow-hidden print:shadow-none print:rounded-none print:max-w-none print:w-full print:border-none print:m-0 print:mt-0">
-        <div className="p-8 print:p-6">
-          <div className="flex items-center gap-4 mb-6">
-            <div className="bg-slate-900 text-white p-3 rounded-2xl">
-              <Briefcase size={24} />
+      <div className="max-w-5xl mx-auto bg-white shadow-2xl rounded-t-3xl mt-8 overflow-hidden print:shadow-none print:rounded-none print:max-w-none print:w-full print:border-none print:m-0 print-page-break">
+        <div className="p-8 print:p-8">
+          <div className="flex items-center gap-4 mb-6 print:mb-4">
+            <div className="bg-slate-900 text-white p-3 rounded-2xl print:p-2">
+              <Briefcase size={24} className="print:w-5 print:h-5" />
             </div>
             <div>
-              <h2 className="text-3xl font-black uppercase tracking-tighter leading-none">Professional Projects</h2>
-              <p className="text-primary font-bold text-sm tracking-widest uppercase mt-1">In-Office Experience & Contributions</p>
+              <h2 className="text-3xl font-black uppercase tracking-tight leading-none print:text-xl">Professional Projects</h2>
+              <p className="text-primary font-bold text-base tracking-widest uppercase mt-1 print:text-xs">In-Office Experience & Contributions</p>
             </div>
             <div className="h-px flex-1 bg-slate-100" />
           </div>
 
-          <div className="grid grid-cols-1 gap-4">
+          <div className="grid grid-cols-1 gap-4 print:gap-1.5">
             {inOfficeProjects.map((proj, i) => (
-              <div key={i} className="p-4 bg-slate-50/50 rounded-2xl border border-slate-100 print:break-inside-avoid hover:bg-white transition-all duration-300">
-                <div className="flex flex-col sm:flex-row justify-between items-start mb-2 gap-2">
+              <div key={i} className="p-4 bg-slate-50/50 rounded-2xl border border-slate-100 print:break-inside-avoid hover:bg-white transition-all duration-300 print:p-4 print:rounded-lg print:border-slate-200 print:mt-6 first:print:mt-0">
+                <div className="flex flex-col sm:flex-row justify-between items-start mb-2 gap-2 print:mb-0.5 print:gap-1">
                   <div>
-                    <h4 className="text-lg font-bold mb-0 text-slate-900">{proj.name}</h4>
-                    <p className="text-[10px] text-primary font-bold uppercase tracking-widest">{proj.duration}</p>
+                    <h4 className="text-lg font-bold mb-0 text-slate-900 print:text-[11px] print:leading-tight">{proj.name}</h4>
+                    <p className="text-xs text-primary font-bold uppercase tracking-widest print:text-[10px] print:leading-none">{proj.duration}</p>
                   </div>
                   {proj.client && (
-                    <span className="text-[10px] font-bold uppercase text-primary bg-primary/10 px-3 py-1 rounded-full border border-primary/20">
+                    <span className="text-xs font-bold uppercase text-primary bg-primary/10 px-3 py-1 rounded-full border border-primary/20 print:text-[9px] print:px-1.5 print:py-0 print:h-fit">
                       {proj.client}
                     </span>
                   )}
                 </div>
                 
-                <p className="text-sm text-slate-600 mb-4 leading-relaxed">{proj.description}</p>
+                <p className="text-base text-slate-600 mb-4 leading-relaxed print:text-sm print:mb-1.5 print:leading-tight">{proj.description}</p>
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 print:grid-cols-2 print:gap-2">
                   {proj.technologies && (
-                    <div className="bg-white p-3 rounded-xl border border-slate-100 shadow-sm">
-                      <p className="text-[10px] font-bold text-primary uppercase mb-2 flex items-center gap-2">
-                        <Cpu size={14} /> Technologies Used
+                    <div className="bg-white p-3 rounded-xl border border-slate-100 shadow-sm print:p-1.5 print:rounded-md print:border-slate-50">
+                      <p className="text-xs font-bold text-primary uppercase mb-2 flex items-center gap-2 print:text-[10px] print:mb-0.5">
+                        <Cpu size={14} className="print:w-2.5 print:h-2.5" /> Technologies
                       </p>
-                      <p className="text-xs text-slate-500 leading-relaxed font-medium">{proj.technologies}</p>
+                      <p className="text-sm text-slate-500 leading-relaxed font-medium print:text-sm print:leading-tight">{proj.technologies}</p>
                     </div>
                   )}
                   {proj.role && (
-                    <div className="bg-white p-3 rounded-xl border border-slate-100 shadow-sm">
-                      <p className="text-[10px] font-bold text-primary uppercase mb-2 flex items-center gap-2">
-                        <Award size={14} /> Role & Key Contributions
+                    <div className="bg-white p-3 rounded-xl border border-slate-100 shadow-sm print:p-1.5 print:rounded-md print:border-slate-50">
+                      <p className="text-xs font-bold text-primary uppercase mb-2 flex items-center gap-2 print:text-[10px] print:mb-0.5">
+                        <Award size={14} className="print:w-2.5 print:h-2.5" /> Role & Contributions
                       </p>
-                      <ul className="text-xs text-slate-600 space-y-1.5 list-none">
+                      <ul className="text-sm text-slate-600 space-y-1.5 list-none print:text-sm print:space-y-0.5">
                         {Array.isArray(proj.role) 
                           ? proj.role.map((r, idx) => (
                               <li key={idx} className="flex items-start gap-2">
-                                <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0" />
+                                <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0 print:w-1 print:h-1 print:mt-1" />
                                 <span className="leading-tight">{r}</span>
                               </li>
                             )) 
                           : <li className="flex items-start gap-2">
-                              <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0" />
+                              <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0 print:w-1 print:h-1 print:mt-1" />
                               <span className="leading-tight">{proj.role}</span>
                             </li>
                         }

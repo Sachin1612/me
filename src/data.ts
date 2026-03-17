@@ -3,7 +3,7 @@ export const personalInfo = {
   title: "Software Engineer",
   email: "sachin.chouhan1612@gmail.com",
   phone: "(887) 138-4050",
-  location: "195-A Veena Nagar, Indore 452010",
+  location: "194-A Veena Nagar, Indore 452010",
   github: "https://github.com/Sachin1612",
   profile: "Extremely motivated to constantly develop my skills and grow professionally. I am confident in my ability to come up with interesting ideas for software development.",
 };
@@ -48,26 +48,26 @@ export const experience = [
 ];
 
 export const skills = {
-  dotNet: ["C# .NET", ".NET MVC", ".NET MVC CORE", ".NET WEB API", "Windows Form Application"],
+  dotNet: ["C# .NET", ".NET MVC", ".NET MVC CORE", ".NET WEB API"],
   database: ["SQL SERVER", "MY SQL", "MongoDB", "DynamoDB"],
-  javascript: ["React js", "Node js", "Angular", "JQuery", "Ionic Framework"],
-  aws: ["Lambda Function", "Cloudwatch", "SNS", "RDS", "Step Function", "EC2", "App Sync", "S3 Bucket"],
+  javascript: ["React js", "Node js", "JQuery", "Ionic Framework"],
+  aws: ["Lambda Function", "Cloudwatch", "SNS", "RDS", "Step Function", "EC2", "S3 Bucket"],
   ai: ["Alexa Skills", "Google Mini Skills"],
   smartHome: ["Tuya", "August", "MyQ", "Philips Hue", "Ecobee"],
-  others: ["Auth0", "Twilio", "Mailgun"],
+  others: ["Github Copilot", "MCP server"],
 };
 
 export const hobbies = [
   { name: "Cricket", icon: "Trophy" },
   { name: "Traveling", icon: "Plane" },
-  { name: "Exploring New Technologies", icon: "Cpu" },
-  { name: "Social Work", icon: "Heart" }
+  { name: "Exploring New Technologies", icon: "Cpu" }
 ];
 
 export const personalProjects = [
   {
     name: "AIWoods",
     description: "AI-powered couple portrait and dance video generation platform. Transform your memories into cinematic era-based masterpieces.",
+    image: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&q=80&w=800",
     features: [
       "AI couple portrait generation",
       "AI couple dance video creation",
@@ -79,6 +79,7 @@ export const personalProjects = [
   {
     name: "CricketKida",
     description: "A complete cricket tournament management and live broadcasting platform for professional and local leagues.",
+    image: "https://images.unsplash.com/photo-1531415074968-036ba1b575da?auto=format&fit=crop&q=80&w=800",
     features: [
       "Broadcaster tools (Team & Player MGMT)",
       "AI-generated live commentary",
@@ -91,12 +92,13 @@ export const personalProjects = [
   {
     name: "Focus YT",
     description: "A distraction-free YouTube experience designed for focused learning and high-impact content consumption.",
+    image: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&q=80&w=800",
     features: [
       "Prompt-based YouTube video search",
       "Ad-free focused watching",
       "Minimalist UI for peak productivity"
     ],
-    link: "#",
+    link: "https://focus-yt.vercel.app/",
     tags: ["Productivity", "UI/UX", "YouTube API"]
   }
 ];
@@ -132,7 +134,7 @@ export const inOfficeProjects = [
   {
     name: "YOURCAUSE - NON-PROFIT CHARITY ORGANIZATION",
     description: "Manages staff, employees, donations, and volunteering data for charity organizations. Includes admin setup and employee experience phases.",
-    technologies: "Angular, .NET Core, MS SQL, Azure CosmosDb",
+    technologies: ".NET Core, MS SQL, Azure CosmosDb",
     role: "Analyzing requirements, providing estimates, designing employee experience pages, unit testing, handling defects.",
     link: "https://www.yourcause.com"
   },

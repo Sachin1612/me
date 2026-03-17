@@ -127,7 +127,7 @@ export default function App() {
         )}
       </AnimatePresence>
 
-      <main className="pt-16">
+      <main className="pt-16 print:pt-0">
         {showResume ? (
           <div className="animate-in fade-in duration-500">
             <div className="max-w-7xl mx-auto px-6 py-8 flex justify-between items-center no-print">
@@ -271,7 +271,7 @@ export default function App() {
                     >
                       <div className="aspect-[4/5] bg-slate-800 rounded-3xl overflow-hidden mb-6 relative">
                         <img 
-                          src={`https://picsum.photos/seed/${proj.name}/800/1000`} 
+                          src={proj.image} 
                           alt={proj.name} 
                           className="w-full h-full object-cover opacity-50 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700"
                           referrerPolicy="no-referrer"
