@@ -130,7 +130,7 @@ export const Resume: React.FC = () => {
               <div className="flex items-center gap-2"><Phone size={14} className="text-[#FF485B]" /> {personalInfo.phone}</div>
               <div className="flex items-center gap-2"><MapPin size={14} className="text-[#FF485B]" /> {personalInfo.location}</div>
               <div className="flex items-center gap-2"><Github size={14} className="text-[#FF485B]" /> {personalInfo.github}</div>
-              <div className="flex items-center gap-2"><Globe size={14} className="text-[#FF485B]" /> Portfolio: https://sachin-portfolio.run.app</div>
+              <div className="flex items-center gap-2"><Globe size={14} className="text-[#FF485B]" /> Portfolio: https://sachin1612.github.io/me</div>
             </div>
           </div>
 
