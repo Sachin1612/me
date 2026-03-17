@@ -145,7 +145,7 @@ export default function App() {
         ) : (
           <>
             {/* Hero Section */}
-            <section id="about" className="relative h-[90vh] flex items-center overflow-hidden">
+            <section id="about" className="relative min-h-[90vh] flex items-center overflow-hidden py-20 md:py-0">
               <div className="absolute inset-0 z-0">
                 <div className="absolute top-1/4 -left-20 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
                 <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
@@ -156,19 +156,20 @@ export default function App() {
                   initial={{ opacity: 0, x: -50 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
+                  className="text-center md:text-left"
                 >
                   <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest mb-6">
                     <Sparkles size={14} /> Available for new opportunities
                   </div>
-                  <h1 className="text-7xl md:text-8xl font-black tracking-tighter leading-[0.9] mb-8">
+                  <h1 className="text-5xl sm:text-7xl md:text-8xl font-black tracking-tighter leading-[0.9] mb-8">
                     CRAFTING <br />
                     <span className="text-primary">DIGITAL</span> <br />
                     SYSTEMS.
                   </h1>
-                  <p className="text-xl text-slate-600 max-w-md mb-10 leading-relaxed font-medium">
+                  <p className="text-lg md:text-xl text-slate-600 max-w-md mx-auto md:mx-0 mb-10 leading-relaxed font-medium">
                     I'm Sachin, a Software Engineer dedicated to building scalable, high-performance applications with .NET, React, and AWS.
                   </p>
-                  <div className="flex flex-wrap gap-4">
+                  <div className="flex flex-wrap justify-center md:justify-start gap-4">
                     <button 
                       onClick={toggleResume}
                       className="bg-ink text-white px-8 py-4 rounded-full font-bold hover:bg-primary transition-all flex items-center gap-2 group"
@@ -186,12 +187,12 @@ export default function App() {
                   initial={{ opacity: 0, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
-                  className="relative hidden md:block"
+                  className="relative"
                 >
-                  <div className="aspect-square bg-slate-100 rounded-3xl overflow-hidden relative group">
+                  <div className="aspect-square bg-slate-100 rounded-3xl overflow-hidden relative group max-w-md mx-auto md:max-w-none">
                     <img 
-                      src="https://picsum.photos/seed/tech/800/800" 
-                      alt="Sachin" 
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Rajwada-Indore.jpg/1280px-Rajwada-Indore.jpg" 
+                      alt="Rajwada Indore" 
                       className="object-cover w-full h-full grayscale group-hover:grayscale-0 transition-all duration-700"
                       referrerPolicy="no-referrer"
                     />
